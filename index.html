@@ -16,32 +16,35 @@
             </tr>
             <tr>
                 <td>0</td>
-                <td id = "a1"></td>
+                <td id = "a0"></td>
             </tr>
             <tr>
                 <td>1</td>
-                <td id = "a"></td>
+                <td id = "a1"></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td id = "a"></td>
+                <td id = "a2"></td>
             </tr>
             <tr>
                 <td>3</td>
-                <td id = "a"></td>
+                <td id = "a3"></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td id = "a"></td>
+                <td id = "a4"></td>
             </tr>
             <tr>
                 <td>5</td>
-                <td id = "a"></td>
+                <td id = "a5"></td>
             </tr>
         </table>
         <script>
             const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
-            
+            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"]; // expand to allow for more contacts.
+            for (let i = 0; i < 6; i++) {
+                document.getElementById(ids[i]).innerHTML = (contacts[i]);
+            }
         </script>
     </body>
 </html>
