@@ -58,7 +58,6 @@
         <script>
             const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
             let loop = "y";
-            const unbreakthething = ""; // this is a debug variable. it mayyyyy be used to make stuff work.
             
             while(loop == "y") {
                 let userEntryInput = prompt("Enter an entry number.");
@@ -73,7 +72,8 @@
                     loop = prompt("Please enter a valid input.\nDo you want to make another selection? (y/n)");
                 }
             }
-            document.getElementById(endmessage).innerHTML = ("Thank you for using this program!" + unbreakthething);
+            // display the end message.
+            document.getElementById("endmessage").innerHTML = ("Thank you for using this program!");
         </script>
     </body>
 </html>
