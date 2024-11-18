@@ -9,15 +9,7 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <script>
-            // setting up table...
-            const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
-            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"];
-            for (let i = 0; i < 6; i++) {
-                document.getElementById(ids[i]).innerHTML = (contacts[i]);
-            }
-            // all html should load after this
-        </script>
+        
         <table>
             <tr>
                 <th>Slot #</th>
@@ -25,33 +17,48 @@
             </tr>
             <tr>
                 <td>0</td>
-                <td id = "a0"></td>
+                <td id = "a0">Arnold</td>
             </tr>
             <tr>
                 <td>1</td>
-                <td id = "a1"></td>
+                <td id = "a1">Sly</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td id = "a2"></td>
+                <td id = "a2">Dwayne</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td id = "a3"></td>
+                <td id = "a3">Vin</td>
             </tr>
             <tr>
                 <td>4</td>
-                <td id = "a4"></td>
+                <td id = "a4">JVCD</td>
             </tr>
             <tr>
-                <td>5</td>
-                <td id = "a5"></td>
+                <td id = "a5">5</td>
+                <td>Steven</td>
             </tr>
         </table>
+        <!-- this will update when the user enters n when prompted with looping -->
         <p id = "endmessage"></p>
-        
         <script>
+            // i planned on having the table update automatically depending on what was in this array, but
+            // it doesn't look like i can get the html to update before the second script starts.
+            // i'll leave this code here if you want to look at it.
+            
+            // setting up table...
+            //const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
+            //const ids = ["a0", "a1", "a2", "a3", "a4", "a5"];
+            //for (let i = 0; i < 6; i++) {
+                //document.getElementById(ids[i]).innerHTML = (contacts[i]);
+            // }
+            // html update should load after this
+        </script>
+        <script>
+            const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
             let loop = "y";
+            
             while(loop == "y") {
                 let userEntryInput = prompt("Enter an entry number.");
                 if (userEntryInput >= 0 && userEntryInput <= 5) { // raise ceiling (currently 5) if you want to add more contacts.
@@ -65,6 +72,7 @@
                     loop = prompt("Please enter a valid input.\nDo you want to make another selection? (y/n)");
                 }
             }
+            document.getElementById(endmessage).innerHTML = ("Thank you for using this program!");
         </script>
     </body>
 </html>
