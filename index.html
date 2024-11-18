@@ -6,7 +6,7 @@
         <meta name="author" content="Milo Wearn">
         <title>CE_Contacts</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         
@@ -58,6 +58,7 @@
         <script>
             const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
             let loop = "y";
+            const unbreakthething = ""; // this is a debug variable. it mayyyyy be used to make stuff work.
             
             while(loop == "y") {
                 let userEntryInput = prompt("Enter an entry number.");
@@ -72,7 +73,7 @@
                     loop = prompt("Please enter a valid input.\nDo you want to make another selection? (y/n)");
                 }
             }
-            document.getElementById(endmessage).innerHTML = ("Thank you for using this program!");
+            document.getElementById(endmessage).innerHTML = ("Thank you for using this program!" + unbreakthething);
         </script>
     </body>
 </html>
