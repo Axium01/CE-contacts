@@ -9,6 +9,15 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <script>
+            // setting up table...
+            const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
+            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"];
+            for (let i = 0; i < 6; i++) {
+                document.getElementById(ids[i]).innerHTML = (contacts[i]);
+            }
+            // all html should load after this
+        </script>
         <table>
             <tr>
                 <th>Slot #</th>
@@ -39,23 +48,15 @@
                 <td id = "a5"></td>
             </tr>
         </table>
-        <p id = "disp"></p>
-        <script>
-            // setting up table...
-            const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
-            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"];
-            for (let i = 0; i < 6; i++) {
-                document.getElementById(ids[i]).innerHTML = (contacts[i]);
-            }
-        </script>
+        <p id = "endmessage"></p>
+        
         <script>
             let loop = "y";
             while(loop == "y") {
                 let userEntryInput = prompt("Enter an entry number.");
-                
                 if (userEntryInput >= 0 && userEntryInput <= 5) { // raise ceiling (currently 5) if you want to add more contacts.
                     loop = prompt("Displaying " + contacts[userEntryInput] + "\nDo you want to make another selection? (y/n)");
-                } else if (userEntryInput == undefined) {
+                } else if (userEntryInput == "") {
                     loop = prompt("That entry is not in the database.\nDo you want to make another selection? (y/n)");
                 } else {
                     loop = prompt("That entry is not in the database.\nDo you want to make another selection? (y/n)");
