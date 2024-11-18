@@ -12,7 +12,7 @@
         <table>
             <tr>
                 <th>Slot #</th>
-                <th>Number</th>
+                <th>Contact Name</th>
             </tr>
             <tr>
                 <td>0</td>
@@ -39,11 +39,22 @@
                 <td id = "a5"></td>
             </tr>
         </table>
+        <p id = "disp"></p>
         <script>
+            // setting up table...
             const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
-            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"]; // expand to allow for more contacts.
+            const ids = ["a0", "a1", "a2", "a3", "a4", "a5"];
             for (let i = 0; i < 6; i++) {
                 document.getElementById(ids[i]).innerHTML = (contacts[i]);
+            }
+            let loop = "y";
+            while(loop == "y") {
+                let userEntryInput = prompt("Enter an entry number.");
+                if (userEntryInput >= 0 && userEntryInput <= 5) { // raise ceiling (currently 5) if you want to add more contacts.
+                    loop = prompt("Displaying " + contacts[userEntryInput] + "\nDo you want to make another selection?");
+                } else {
+                    loop = prompt("That entry is not in the database.\nDo you want to make another selection?");
+                }
             }
         </script>
     </body>
